@@ -1,0 +1,44 @@
+package com.example.myapplication.graphql
+
+object PokemonQueries {
+    const val SEARCH_POKEMON_SPECIES = """
+        query SearchPokemonSpecies(${'$'}name: String!, ${'$'}limit: Int!, ${'$'}offset: Int!) {
+            pokemon_v2_pokemonspecies(
+                where: {name: {_ilike: ${'$'}name}},
+                limit: ${'$'}limit,
+                offset: ${'$'}offset,
+                order_by: {id: asc}
+            ) {
+                id
+                name
+                capture_rate
+                pokemon_v2_pokemoncolor {
+                    name
+                }
+                pokemon_v2_pokemons {
+                    id
+                    name
+                    pokemon_v2_pokemonabilities {
+                        pokemon_v2_ability {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    """
+
+    const val GET_POKEMON_DETAILS = """
+        query GetPokemonDetails(${'$'}id: Int!) {
+            pokemon_v2_pokemon_by_pk(id: ${'$'}id) {
+                id
+                name
+                pokemon_v2_pokemonabilities {
+                    pokemon_v2_ability {
+                        name
+                    }
+                }
+            }
+        }
+    """
+}

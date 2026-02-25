@@ -1,0 +1,45 @@
+type Query {
+  pokemon_v2_pokemonspecies(
+    where: pokemon_v2_pokemonspecies_bool_exp,
+    limit: Int,
+    offset: Int
+  ): [pokemon_v2_pokemonspecies!]!
+  
+  pokemon_v2_pokemon_by_pk(id: Int!): pokemon_v2_pokemon
+}
+
+type pokemon_v2_pokemonspecies {
+  id: Int!
+  name: String!
+  capture_rate: Int!
+  pokemon_v2_pokemoncolor: pokemon_v2_pokemoncolor
+  pokemon_v2_pokemons: [pokemon_v2_pokemon!]!
+}
+
+type pokemon_v2_pokemoncolor {
+  id: Int!
+  name: String!
+}
+
+type pokemon_v2_pokemon {
+  id: Int!
+  name: String!
+  pokemon_v2_pokemonabilities: [pokemon_v2_pokemonability!]!
+}
+
+type pokemon_v2_pokemonability {
+  pokemon_v2_ability: pokemon_v2_ability!
+}
+
+type pokemon_v2_ability {
+  id: Int!
+  name: String!
+}
+
+input pokemon_v2_pokemonspecies_bool_exp {
+  name: pokemon_v2_pokemonspecies_bool_exp_name
+}
+
+input pokemon_v2_pokemonspecies_bool_exp_name {
+  _ilike: String
+}

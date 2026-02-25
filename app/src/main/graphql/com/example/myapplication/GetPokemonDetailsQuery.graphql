@@ -1,0 +1,11 @@
+query GetPokemonDetails($id: Int!) {
+    pokemon_v2_pokemon_by_pk(id: $id) {
+        id
+        name
+        pokemon_v2_pokemonabilities {
+            pokemon_v2_ability {
+                name
+            }
+        }
+    }
+}

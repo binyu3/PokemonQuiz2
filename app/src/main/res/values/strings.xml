@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Pokemon Quiz</string>
+    <string name="search_hint">Search Pokémon species...</string>
+    <string name="welcome_title">Welcome to Pokemon Quiz!</string>
+    <string name="welcome_subtitle">Explore the wonderful world of Pokémon\nSearch and discover your favorite species</string>
+    <string name="start_exploring">Start Exploring</string>
+    <string name="search_empty">Search for Pokémon species</string>
+    <string name="search_empty_hint">Try searching for \'Pikachu\', \'Charizard\', etc.</string>
+    <string name="no_results">No results found for \'%s\'</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="retry">Retry</string>
+    <string name="capture_rate">Capture Rate: %d</string>
+    <string name="pokemon_in_species">Pokémon in this species:</string>
+    <string name="abilities">Abilities</string>
+    <string name="no_abilities">No abilities listed</string>
+    <string name="pokemon_details">Pokémon Details</string>
+</resources>
